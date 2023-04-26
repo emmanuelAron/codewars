@@ -1,0 +1,23 @@
+public class LargestFiveDigitNumber {
+    public static int solve(final String digits) {
+      
+      int max = 0;
+      int size = digits.length();
+    //  System.out.println("size: "+size);
+    //  System.out.println("digits: "+digits);
+      
+      for(int i=0;i<size;i++){
+        if(i+4<size){
+         // System.out.println("i: "+i);
+         // System.out.println("digits.substring(0,0+5): "+digits.substring(0,0+5));
+          String fiveLen = digits.substring(i,i+5);
+          int nb = Integer.valueOf(fiveLen);
+          max = Math.max(max,nb);
+        }
+        
+        
+      }
+     // System.out.println("max: "+max);
+        return max; // you code here
+    }
+}
